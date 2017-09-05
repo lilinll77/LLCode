@@ -11,12 +11,12 @@
 
 @interface LLTextRectCalcHelper : NSObject
 
-+ (CGRect)calcByNSStringFunction:(NSString *)calcedStr withSize:(CGSize)limitSize;
++ (CGSize)calcByNSStringFunction:(NSString *)calcedStr withSize:(CGSize)limitSize;
 
-+ (CGRect)calcByCoreTextFunction:(NSString *)calcedStr withSize:(CGSize)limitSize;
++ (CGSize)calcByCoreTextFunction:(NSString *)calcedStr withSize:(CGSize)limitSize;
 
-+ (CGRect)calcByUILabelFunction:(NSString *)calcedStr withSize:(CGSize)limitSize;
++ (CGSize)calcByUILabelFunction:(NSString *)calcedStr withSize:(CGSize)limitSize;
 
-+ (CGRect)calcByNSAttributeStringFunction:(NSString *)calcedStr withSize:(CGSize)limitSize;
++ (CGSize)calcByNSAttributeStringFunction:(NSString *)calcedStr withSize:(CGSize)limitSize;
 
 @end
