@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,12 +18,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-//    _switchviewcontroller = [[SwitchViewController alloc]initWithNibName:@"SwitchViewController" bundle:nil];
-//    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:_switchviewcontroller];
-//    [self.window addSubview:navController.view];
-//    [navController release];
-//    [self.window makeKeyAndVisible];
+    ViewController *vc = [ViewController new];
+    vc.view.frame = [UIScreen mainScreen].bounds;
+    vc.view.backgroundColor = [UIColor whiteColor];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window addSubview:navController.view];
+    self.window.rootViewController = navController;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     return YES;
+    
 }
 
 
