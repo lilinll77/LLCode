@@ -7,64 +7,99 @@
 //
 
 #import "ViewController.h"
+#import "LLResultTableViewCell.h"
 
-@interface ViewController ()
+@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) UIButton *pushButton;
+@property (nonatomic, strong) UITableView *compareView;
+@property (nonatomic, strong) NSMutableArray *dataSource;
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-
-//    btn.frame= CGRectMake(0, 0, 40, 44);
-    btn.backgroundColor = [UIColor yellowColor];
-    UIBarButtonItem *btn_right = [[UIBarButtonItem alloc] initWithCustomView:btn];
-    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
-                                       initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
-                                       target:nil action:nil];
-    negativeSpacer.width = 5;
-    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:negativeSpacer, btn_right, nil];
-    
-}
+#pragma mark - 生命周期
 
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
     
-    [self.view addSubview:self.pushButton];
+    [self.view addSubview:self.compareView];
 }
 
-- (void)onPush:(id)sender
+- (void)viewWillAppear:(BOOL)animated
 {
-    ViewController *pushedVC = [ViewController new];
-                     
-    [self.navigationController pushViewController:pushedVC animated:YES];
+    [super viewWillAppear:animated];
+    
+    [self initData];
 }
 
-- (UIButton *)pushButton
+#pragma mark - 数据
+
+- (void)initData
 {
-    if (_pushButton == nil) {
-        _pushButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_pushButton addTarget:self action:@selector(onPush:) forControlEvents:UIControlEventTouchUpInside];
+    _dataSource = [NSMutableArray array];
+    
+    NSInteger row = 1000;
+    NSInteger col = Colume;
+    
+    for (NSInteger i = 0; i < row; ++i)
+    {
+        NSMutableArray *column = [NSMutableArray array];
+        for (NSInteger j = 0; j < col; ++j)
+        {
+            NSInteger randIndex = rand() % 30;
+            [column addObject:[NSString stringWithFormat:@"res_%ld.png", randIndex]];
+        }
         
-        _pushButton.frame = CGRectMake(200, 100, 70, 50);
-        [_pushButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        _pushButton.font = [UIFont systemFontOfSize:16];
-        [_pushButton setTitle:@"push" forState:UIControlStateNormal];
+        [_dataSource addObject:column];
+    }
+}
+
+#pragma mark - 实现委托  UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return _dataSource.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *identify;
+    if (!identify) {
+        identify = NSStringFromClass([LLResultTableViewCell class]);
     }
     
-    return _pushButton;
+    LLResultTableViewCell *cell = [self.compareView dequeueReusableCellWithIdentifier:identify];
+    if (!cell) {
+        cell = [[LLResultTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
+    }
+    
+    NSArray *imageArray = [_dataSource objectAtIndex:indexPath.row];
+    [cell setData:imageArray];
+    
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return RowHight;
+}
+
+#pragma mark - Property
+
+- (UITableView *)compareView
+{
+    if (!_compareView)
+    {
+        CGRect frame = CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 145);
+        _compareView = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
+        _compareView.delegate = self;
+        _compareView.dataSource = self;
+        _compareView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    }
+    
+    return _compareView;
 }
 
 @end
