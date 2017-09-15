@@ -45,6 +45,7 @@
 		E662F3D11F6678A200E8FEA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E662F3D01F6678A200E8FEA8 /* Assets.xcassets */; };
 		E662F3D41F6678A200E8FEA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E662F3D21F6678A200E8FEA8 /* LaunchScreen.storyboard */; };
 		E662F3D71F6678A200E8FEA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E662F3D61F6678A200E8FEA8 /* main.m */; };
+		E6B099211F6B674200D3FA84 /* res_32.png in Resources */ = {isa = PBXBuildFile; fileRef = E6B099201F6B663100D3FA84 /* res_32.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		E662F3D31F6678A200E8FEA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E662F3D51F6678A200E8FEA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E662F3D61F6678A200E8FEA8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E6B099201F6B663100D3FA84 /* res_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = res_32.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		E62720E61F67717E00012095 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				E6B099201F6B663100D3FA84 /* res_32.png */,
 				E62720EF1F67739600012095 /* res_0.png */,
 				E62720FB1F67764100012095 /* res_1.png */,
 				E62720F61F67764100012095 /* res_2.png */,
@@ -242,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6B099211F6B674200D3FA84 /* res_32.png in Resources */,
 				E62721101F67767600012095 /* res_1.png in Resources */,
 				E62721111F67767600012095 /* res_2.png in Resources */,
 				E62721121F67767600012095 /* res_3.png in Resources */,

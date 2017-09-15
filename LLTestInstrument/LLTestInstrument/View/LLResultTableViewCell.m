@@ -24,6 +24,7 @@
         {
             [self.contentView addSubview:imageView];
         }
+        
     }
     
     return self;
@@ -53,10 +54,10 @@
             CGFloat xPixel = i * offset + i * RowHight;
             
             UIImageView *imageView = [[UIImageView alloc] init];
-            imageView.layer.cornerRadius = 20;
+            imageView.layer.cornerRadius = 32;
             imageView.layer.masksToBounds = YES;
-            imageView.layer.opaque = YES;
-            imageView.clipsToBounds = YES;
+            imageView.layer.shadowOffset = CGSizeMake(10, 10);
+            
             imageView.frame = CGRectMake(xPixel, 0, RowHight, RowHight);
             
             [_images addObject:imageView];

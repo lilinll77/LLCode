@@ -24,6 +24,7 @@
 {
     [super viewDidLayoutSubviews];
     
+    
     [self.view addSubview:self.compareView];
 }
 
@@ -50,8 +51,6 @@
         {
             NSInteger randIndex = rand() % 30;
             [column addObject:[NSString stringWithFormat:@"res_%ld.png", randIndex]];
-            
-//            [column addObject:@"res_32.png"];
         }
         
         [_dataSource addObject:column];
