@@ -30,7 +30,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
     [self initData];
 }
 
@@ -78,6 +77,7 @@
     }
     
     NSArray *imageArray = [_dataSource objectAtIndex:indexPath.row];
+//    cell.layer.shouldRasterize = YES;
     [cell setData:imageArray];
     
     return cell;

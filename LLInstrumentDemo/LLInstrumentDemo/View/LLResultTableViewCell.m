@@ -53,9 +53,9 @@
             CGFloat xPixel = i * offset + i * RowHight;
             
             UIImageView *imageView = [[UIImageView alloc] init];
-            imageView.layer.cornerRadius = 20;
+            imageView.layer.cornerRadius = 40;
             imageView.layer.masksToBounds = YES;
-            imageView.layer.opaque = YES;
+//            imageView.layer.opaque = YES;
             imageView.clipsToBounds = YES;
             imageView.frame = CGRectMake(xPixel, 0, RowHight, RowHight);
             

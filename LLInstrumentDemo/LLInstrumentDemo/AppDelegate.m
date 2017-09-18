@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "KMCGeigerCounter.h"
 
 @interface AppDelegate ()
 
@@ -28,6 +29,11 @@
     self.window.rootViewController = navController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [KMCGeigerCounter sharedGeigerCounter].enabled = YES;
+    });
+
     return YES;
     
 }

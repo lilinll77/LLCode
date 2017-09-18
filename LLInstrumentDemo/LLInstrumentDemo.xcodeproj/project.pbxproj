@@ -46,6 +46,7 @@
 		E662F3D41F6678A200E8FEA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E662F3D21F6678A200E8FEA8 /* LaunchScreen.storyboard */; };
 		E662F3D71F6678A200E8FEA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E662F3D61F6678A200E8FEA8 /* main.m */; };
 		E6B099211F6B674200D3FA84 /* res_32.png in Resources */ = {isa = PBXBuildFile; fileRef = E6B099201F6B663100D3FA84 /* res_32.png */; };
+		E6B099281F6B6FC000D3FA84 /* KMCGeigerCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B099261F6B6F4000D3FA84 /* KMCGeigerCounter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +94,9 @@
 		E662F3D51F6678A200E8FEA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E662F3D61F6678A200E8FEA8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E6B099201F6B663100D3FA84 /* res_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = res_32.png; sourceTree = "<group>"; };
+		E6B099251F6B6F4000D3FA84 /* KMCGeigerCounter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMCGeigerCounter.h; sourceTree = "<group>"; };
+		E6B099261F6B6F4000D3FA84 /* KMCGeigerCounter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMCGeigerCounter.m; sourceTree = "<group>"; };
+		E6B099271F6B6F4000D3FA84 /* KMCGeigerCounterTick.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = KMCGeigerCounterTick.aiff; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,7 @@
 		E662F3C61F6678A200E8FEA8 /* LLInstrumentDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E6B099241F6B6F4000D3FA84 /* KMCGeigerCounter */,
 				E62720E61F67717E00012095 /* res */,
 				E62720E21F676C7100012095 /* View */,
 				E662F3C71F6678A200E8FEA8 /* AppDelegate.h */,
@@ -186,6 +191,16 @@
 				E662F3D61F6678A200E8FEA8 /* main.m */,
 			);
 			path = LLInstrumentDemo;
+			sourceTree = "<group>";
+		};
+		E6B099241F6B6F4000D3FA84 /* KMCGeigerCounter */ = {
+			isa = PBXGroup;
+			children = (
+				E6B099251F6B6F4000D3FA84 /* KMCGeigerCounter.h */,
+				E6B099261F6B6F4000D3FA84 /* KMCGeigerCounter.m */,
+				E6B099271F6B6F4000D3FA84 /* KMCGeigerCounterTick.aiff */,
+			);
+			path = KMCGeigerCounter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6B099281F6B6FC000D3FA84 /* KMCGeigerCounter.m in Sources */,
 				E62720E51F676CE200012095 /* LLResultTableViewCell.m in Sources */,
 				E662F3CC1F6678A200E8FEA8 /* ViewController.m in Sources */,
 				E662F3D71F6678A200E8FEA8 /* main.m in Sources */,
@@ -429,7 +445,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2EZ77ZGT5J;
 				INFOPLIST_FILE = LLInstrumentDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stack.LLInstrumentDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -443,7 +459,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2EZ77ZGT5J;
 				INFOPLIST_FILE = LLInstrumentDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stack.LLInstrumentDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
