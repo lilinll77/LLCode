@@ -85,8 +85,8 @@ typedef NS_ENUM(NSUInteger,LLCalcType)
     unichar a = 0x4e00;
 //    0x4e00 && a < 0x9fff
     
+//    因项目需要做下判断字符串中是否含有中文，便查询了相关资料，中文代码范围0x4E00~0x9FA5，而网上很多网友提供的中文编码范围是0x4E00~0x9fff，检验方法很简单，字符串”一”即可检验返回值。
     for (NSInteger i=0; i<(0x9fff - 0x4e00); ++i)
-//    for (NSInteger i=0; i<20; ++i)
     {
         unichar tempChar = a + i;
         _curSize = CGSizeZero;
@@ -108,11 +108,11 @@ typedef NS_ENUM(NSUInteger,LLCalcType)
         
         if (_inputView.text.length != 22)
         {
-            NSLog(@"----------奇怪的字符出现了-------- %@ %ld个字符",_inputView.text,  _inputView.text.length/str.length);
-//            break;
+            NSLog(@"----------奇怪的字符出现了-------- %@ %lu个字符",_inputView.text,  _inputView.text.length/str.length);
+            continue;
         }
 
-        NSLog(@"%@ %ld个字符",_inputView.text,  _inputView.text.length/str.length);
+        NSLog(@"%@ %lu个字符",_inputView.text,  _inputView.text.length/str.length);
     }
 }
 
