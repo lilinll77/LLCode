@@ -51,6 +51,7 @@ typedef NS_ENUM(NSUInteger,LLCalcType)
 
 #pragma mark - response deleage
 
+// 遍历所有英文
 //- (void)onCombare:(id)sender
 //{
 //    char a = 'a';
@@ -78,6 +79,43 @@ typedef NS_ENUM(NSUInteger,LLCalcType)
 //    }
 //}
 
+// 遍历所有中文
+- (void)onCombare:(id)sender
+{
+    unichar a = 0x4e00;
+//    0x4e00 && a < 0x9fff
+    
+    for (NSInteger i=0; i<(0x9fff - 0x4e00); ++i)
+//    for (NSInteger i=0; i<20; ++i)
+    {
+        unichar tempChar = a + i;
+        _curSize = CGSizeZero;
+        CGSize orgSize = _curSize;
+        NSString *str = [NSString stringWithCharacters:&tempChar length:1];
+        str = [str stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+
+        _inputView.text = nil;
+
+        while (orgSize.height == _curSize.height)
+        {
+            self.inputView.text = [NSString stringWithFormat:@"%@%@",self.inputView.text,str];
+            [self reloadData];
+
+            if (orgSize.width == 0) {
+                orgSize = _curSize;
+            }
+        }
+        
+        if (_inputView.text.length != 22)
+        {
+            NSLog(@"----------奇怪的字符出现了-------- %@ %ld个字符",_inputView.text,  _inputView.text.length/str.length);
+//            break;
+        }
+
+        NSLog(@"%@ %ld个字符",_inputView.text,  _inputView.text.length/str.length);
+    }
+}
+
 //- (void)onCombare:(id)sender
 //{
 //    for (NSInteger i=0; i<10; ++i)
@@ -101,10 +139,10 @@ typedef NS_ENUM(NSUInteger,LLCalcType)
 //    }
 //}
 
-- (void)onCombare:(id)sender
-{
-    [self reloadData];
-}
+//- (void)onCombare:(id)sender
+//{
+//    [self reloadData];
+//}
 
 #pragma mark - 实现委托  UITableViewDataSource
 
