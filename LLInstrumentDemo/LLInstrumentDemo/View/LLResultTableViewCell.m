@@ -55,8 +55,9 @@
             UIImageView *imageView = [[UIImageView alloc] init];
             imageView.layer.cornerRadius = 40;
             imageView.layer.masksToBounds = YES;
-//            imageView.layer.opaque = YES;
             imageView.clipsToBounds = YES;
+            imageView.backgroundColor = [UIColor blackColor];
+            imageView.layer.opaque = YES;
             imageView.frame = CGRectMake(xPixel, 0, RowHight, RowHight);
             
             [_images addObject:imageView];
