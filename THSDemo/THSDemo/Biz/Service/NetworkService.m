@@ -27,7 +27,6 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             
             // 主线程回调
-            
             NSMutableArray *configs = [NSMutableArray array];
             
             {
@@ -35,7 +34,7 @@
                 dummy.type = 1;
                 
                 NSMutableArray *entrys = [NSMutableArray array];
-                for (int i = 0; i < 8; ++i) {
+                for (int i = 0; i < 9; ++i) {
                     EntryModel *entry = [[EntryModel alloc] init];
                     entry.htmlTitle = [NSString stringWithFormat:@"title%d", i];
                     [entrys addObject:entry];
@@ -44,20 +43,22 @@
                 dummy.entrys = entrys;
                 [configs addObject:dummy];
             }
-//            
-//            {
-//                ContainerConfigModel *dummy = [[ContainerConfigModel alloc] init];
-//                dummy.type = 3;
-//                NSMutableArray *entrys = [NSMutableArray array];
-//                for (int i = 0; i < 7; ++i) {
-//                    EntryModel *entry = [[EntryModel alloc] init];
-//                    [entrys addObject:entry];
-//                }
-//                
-//                dummy.entrys = entrys;
-//                [configs addObject:dummy];
-//                
-//            }
+            
+            {
+                ContainerConfigModel *dummy = [[ContainerConfigModel alloc] init];
+                dummy.type = 3;
+                NSMutableArray *entrys = [NSMutableArray array];
+                for (int i = 0; i < 3; ++i) {
+                    EntryModel *entry = [[EntryModel alloc] init];
+                    entry.htmlTitle = [NSString stringWithFormat:@"title%d", i];
+                    entry.htmlSubTitle = [NSString stringWithFormat:@"title%d", i + 100];
+                    [entrys addObject:entry];
+                }
+                
+                dummy.entrys = entrys;
+                [configs addObject:dummy];
+                
+            }
             
             {
                 ContainerConfigModel *dummy = [[ContainerConfigModel alloc] init];

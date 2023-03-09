@@ -9,6 +9,7 @@
 #import "ServiceCenter.h"
 #import "EntryListView.h"
 #import "EntryGridView.h"
+#import "EntryHoriView.h"
 
 @implementation Viewfactory
 
@@ -59,6 +60,7 @@
             }
                 break;
             case ContainerTypeHori: {
+                _height = [EntryHoriView totalHeight:self.model.entrys];
             }
                 break;
         }
@@ -81,6 +83,9 @@
                 break;
                 
             case ContainerTypeHori: {
+                
+                _container = [[EntryHoriView alloc] initWithModel:[self model2ViewModel:self.model.entrys]];
+
             }
                 break;
         }

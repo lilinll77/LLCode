@@ -24,6 +24,8 @@
 		E6B03D2629B9C783000BDCC7 /* MainPageConfigView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B03D2529B9C783000BDCC7 /* MainPageConfigView.m */; };
 		E6B03D2929B9DCE0000BDCC7 /* EntryGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B03D2829B9DCE0000BDCC7 /* EntryGridView.m */; };
 		E6B03D2C29B9E50B000BDCC7 /* GridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B03D2B29B9E50B000BDCC7 /* GridCell.m */; };
+		E6B03D2F29B9EB49000BDCC7 /* EntryHoriView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B03D2E29B9EB49000BDCC7 /* EntryHoriView.m */; };
+		E6B03D3229B9EBDB000BDCC7 /* HoriCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B03D3129B9EBDB000BDCC7 /* HoriCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,10 @@
 		E6B03D2829B9DCE0000BDCC7 /* EntryGridView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntryGridView.m; sourceTree = "<group>"; };
 		E6B03D2A29B9E50B000BDCC7 /* GridCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridCell.h; sourceTree = "<group>"; };
 		E6B03D2B29B9E50B000BDCC7 /* GridCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridCell.m; sourceTree = "<group>"; };
+		E6B03D2D29B9EB49000BDCC7 /* EntryHoriView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryHoriView.h; sourceTree = "<group>"; };
+		E6B03D2E29B9EB49000BDCC7 /* EntryHoriView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntryHoriView.m; sourceTree = "<group>"; };
+		E6B03D3029B9EBDB000BDCC7 /* HoriCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HoriCell.h; sourceTree = "<group>"; };
+		E6B03D3129B9EBDB000BDCC7 /* HoriCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HoriCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +169,10 @@
 				E6B03D2829B9DCE0000BDCC7 /* EntryGridView.m */,
 				E6B03D2A29B9E50B000BDCC7 /* GridCell.h */,
 				E6B03D2B29B9E50B000BDCC7 /* GridCell.m */,
+				E6B03D2D29B9EB49000BDCC7 /* EntryHoriView.h */,
+				E6B03D2E29B9EB49000BDCC7 /* EntryHoriView.m */,
+				E6B03D3029B9EBDB000BDCC7 /* HoriCell.h */,
+				E6B03D3129B9EBDB000BDCC7 /* HoriCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -251,10 +261,12 @@
 				E612139729B997EE00D162EB /* EntryListView.m in Sources */,
 				E612136929B9759500D162EB /* AppDelegate.m in Sources */,
 				E6B03D2329B9BF39000BDCC7 /* ListCell.m in Sources */,
+				E6B03D3229B9EBDB000BDCC7 /* HoriCell.m in Sources */,
 				E6B03D2629B9C783000BDCC7 /* MainPageConfigView.m in Sources */,
 				E612137A29B9759600D162EB /* main.m in Sources */,
 				E612138F29B986BF00D162EB /* ServiceCenter.m in Sources */,
 				E6B03D2929B9DCE0000BDCC7 /* EntryGridView.m in Sources */,
+				E6B03D2F29B9EB49000BDCC7 /* EntryHoriView.m in Sources */,
 				E612138629B97CC900D162EB /* ContainerConfigModel.m in Sources */,
 				E612138929B97F7800D162EB /* NetworkService.m in Sources */,
 				E612136C29B9759500D162EB /* SceneDelegate.m in Sources */,
