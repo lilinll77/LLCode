@@ -14,6 +14,16 @@
 		E612137429B9759600D162EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E612137329B9759600D162EB /* Assets.xcassets */; };
 		E612137729B9759600D162EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E612137529B9759600D162EB /* LaunchScreen.storyboard */; };
 		E612137A29B9759600D162EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E612137929B9759600D162EB /* main.m */; };
+		E612138629B97CC900D162EB /* ContainerConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E612138529B97CC900D162EB /* ContainerConfigModel.m */; };
+		E612138929B97F7800D162EB /* NetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = E612138829B97F7800D162EB /* NetworkService.m */; };
+		E612138C29B982FD00D162EB /* RouterService.m in Sources */ = {isa = PBXBuildFile; fileRef = E612138B29B982FD00D162EB /* RouterService.m */; };
+		E612138F29B986BF00D162EB /* ServiceCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = E612138E29B986BF00D162EB /* ServiceCenter.m */; };
+		E612139429B9912200D162EB /* Viewfactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E612139329B9912200D162EB /* Viewfactory.m */; };
+		E612139729B997EE00D162EB /* EntryListView.m in Sources */ = {isa = PBXBuildFile; fileRef = E612139629B997EE00D162EB /* EntryListView.m */; };
+		E6B03D2329B9BF39000BDCC7 /* ListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B03D2229B9BF39000BDCC7 /* ListCell.m */; };
+		E6B03D2629B9C783000BDCC7 /* MainPageConfigView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B03D2529B9C783000BDCC7 /* MainPageConfigView.m */; };
+		E6B03D2929B9DCE0000BDCC7 /* EntryGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B03D2829B9DCE0000BDCC7 /* EntryGridView.m */; };
+		E6B03D2C29B9E50B000BDCC7 /* GridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B03D2B29B9E50B000BDCC7 /* GridCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +39,26 @@
 		E612137629B9759600D162EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E612137829B9759600D162EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E612137929B9759600D162EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E612138429B97CC900D162EB /* ContainerConfigModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContainerConfigModel.h; sourceTree = "<group>"; };
+		E612138529B97CC900D162EB /* ContainerConfigModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContainerConfigModel.m; sourceTree = "<group>"; };
+		E612138729B97F7800D162EB /* NetworkService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkService.h; sourceTree = "<group>"; };
+		E612138829B97F7800D162EB /* NetworkService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkService.m; sourceTree = "<group>"; };
+		E612138A29B982FD00D162EB /* RouterService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RouterService.h; sourceTree = "<group>"; };
+		E612138B29B982FD00D162EB /* RouterService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouterService.m; sourceTree = "<group>"; };
+		E612138D29B986BF00D162EB /* ServiceCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceCenter.h; sourceTree = "<group>"; };
+		E612138E29B986BF00D162EB /* ServiceCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceCenter.m; sourceTree = "<group>"; };
+		E612139229B9912200D162EB /* Viewfactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Viewfactory.h; sourceTree = "<group>"; };
+		E612139329B9912200D162EB /* Viewfactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Viewfactory.m; sourceTree = "<group>"; };
+		E612139529B997EE00D162EB /* EntryListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryListView.h; sourceTree = "<group>"; };
+		E612139629B997EE00D162EB /* EntryListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntryListView.m; sourceTree = "<group>"; };
+		E6B03D2129B9BF39000BDCC7 /* ListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListCell.h; sourceTree = "<group>"; };
+		E6B03D2229B9BF39000BDCC7 /* ListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListCell.m; sourceTree = "<group>"; };
+		E6B03D2429B9C783000BDCC7 /* MainPageConfigView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainPageConfigView.h; sourceTree = "<group>"; };
+		E6B03D2529B9C783000BDCC7 /* MainPageConfigView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainPageConfigView.m; sourceTree = "<group>"; };
+		E6B03D2729B9DCE0000BDCC7 /* EntryGridView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryGridView.h; sourceTree = "<group>"; };
+		E6B03D2829B9DCE0000BDCC7 /* EntryGridView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntryGridView.m; sourceTree = "<group>"; };
+		E6B03D2A29B9E50B000BDCC7 /* GridCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridCell.h; sourceTree = "<group>"; };
+		E6B03D2B29B9E50B000BDCC7 /* GridCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +91,8 @@
 		E612136629B9759500D162EB /* THSDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E612138329B97C4500D162EB /* Common */,
+				E612138029B97C3700D162EB /* Biz */,
 				E612136729B9759500D162EB /* AppDelegate.h */,
 				E612136829B9759500D162EB /* AppDelegate.m */,
 				E612136A29B9759500D162EB /* SceneDelegate.h */,
@@ -74,6 +106,72 @@
 				E612137929B9759600D162EB /* main.m */,
 			);
 			path = THSDemo;
+			sourceTree = "<group>";
+		};
+		E612138029B97C3700D162EB /* Biz */ = {
+			isa = PBXGroup;
+			children = (
+				E612139129B98F3500D162EB /* ViewModel */,
+				E612139029B98F1600D162EB /* View */,
+				E612138129B97C3700D162EB /* Model */,
+				E612138229B97C3700D162EB /* Service */,
+			);
+			path = Biz;
+			sourceTree = "<group>";
+		};
+		E612138129B97C3700D162EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E612138429B97CC900D162EB /* ContainerConfigModel.h */,
+				E612138529B97CC900D162EB /* ContainerConfigModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E612138229B97C3700D162EB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E612138729B97F7800D162EB /* NetworkService.h */,
+				E612138829B97F7800D162EB /* NetworkService.m */,
+				E612138A29B982FD00D162EB /* RouterService.h */,
+				E612138B29B982FD00D162EB /* RouterService.m */,
+				E612139229B9912200D162EB /* Viewfactory.h */,
+				E612139329B9912200D162EB /* Viewfactory.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E612138329B97C4500D162EB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E612138D29B986BF00D162EB /* ServiceCenter.h */,
+				E612138E29B986BF00D162EB /* ServiceCenter.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E612139029B98F1600D162EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E612139529B997EE00D162EB /* EntryListView.h */,
+				E612139629B997EE00D162EB /* EntryListView.m */,
+				E6B03D2129B9BF39000BDCC7 /* ListCell.h */,
+				E6B03D2229B9BF39000BDCC7 /* ListCell.m */,
+				E6B03D2429B9C783000BDCC7 /* MainPageConfigView.h */,
+				E6B03D2529B9C783000BDCC7 /* MainPageConfigView.m */,
+				E6B03D2729B9DCE0000BDCC7 /* EntryGridView.h */,
+				E6B03D2829B9DCE0000BDCC7 /* EntryGridView.m */,
+				E6B03D2A29B9E50B000BDCC7 /* GridCell.h */,
+				E6B03D2B29B9E50B000BDCC7 /* GridCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E612139129B98F3500D162EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +244,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E612138C29B982FD00D162EB /* RouterService.m in Sources */,
 				E612136F29B9759500D162EB /* ViewController.m in Sources */,
+				E6B03D2C29B9E50B000BDCC7 /* GridCell.m in Sources */,
+				E612139429B9912200D162EB /* Viewfactory.m in Sources */,
+				E612139729B997EE00D162EB /* EntryListView.m in Sources */,
 				E612136929B9759500D162EB /* AppDelegate.m in Sources */,
+				E6B03D2329B9BF39000BDCC7 /* ListCell.m in Sources */,
+				E6B03D2629B9C783000BDCC7 /* MainPageConfigView.m in Sources */,
 				E612137A29B9759600D162EB /* main.m in Sources */,
+				E612138F29B986BF00D162EB /* ServiceCenter.m in Sources */,
+				E6B03D2929B9DCE0000BDCC7 /* EntryGridView.m in Sources */,
+				E612138629B97CC900D162EB /* ContainerConfigModel.m in Sources */,
+				E612138929B97F7800D162EB /* NetworkService.m in Sources */,
 				E612136C29B9759500D162EB /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

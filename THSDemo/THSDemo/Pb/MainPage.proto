@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package biz.mainPage;
+
+enum ContainerType {
+  RESERVE = 0;
+  Grid    = 1;
+  List    = 2;
+  Horizontal = 3;
+}
+
+message Entry {
+  string iconUrl = 1;
+  string htmlTitle = 2;
+  string htmlSubTitle = 3;
+  string router = 4;
+}
+
+message ContainterConfig {
+  ContainerType type = 1;
+  repeated Entry elements = 2;
+}
+
+message MainPageRequest {
+  int32 appVer = 1;
+}
+
+message MainPageResponse {
+  int32 code = 1;
+  string errMsg = 2;
+  repeated ContainterConfig configs = 3;
+}
