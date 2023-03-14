@@ -23,6 +23,7 @@ message ContainterConfig {
 
 message MainPageRequest {
   int32 appVer = 1;
+  int32 configVersion = 2;
 }
 
 message MainPageResponse {
